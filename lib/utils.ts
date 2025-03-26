@@ -296,7 +296,8 @@ export function extractDescription($: CheerioAPI): string {
   });
 
   // 6. Extract Technical Details section
-  const technicalDetailsSelector = "#technical-details table tbody tr";
+  const technicalDetailsSelector =
+    "#prodDetails #technical-details table tbody tr";
   $(technicalDetailsSelector).each((_, row) => {
     const label = $(row).find("th").text().trim();
     const value = $(row).find("td").text().trim();
@@ -307,7 +308,7 @@ export function extractDescription($: CheerioAPI): string {
 
   // 7. Extract Product Details (like dimensions, weight, manufacturer, etc.)
   const productDetailsSelector =
-    "#detailBullets_feature_div ul.a-unordered-list.a-nostyle.a-vertical.a-spacing-none li span.a-list-item";
+    "#detailBullets_feature_div #detailBullets_feature_div ul.a-unordered-list.a-nostyle.a-vertical.a-spacing-none li span.a-list-item";
   $(productDetailsSelector).each((_, el) => {
     const text = $(el)
       .text()
