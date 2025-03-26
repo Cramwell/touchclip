@@ -3,6 +3,8 @@ import Searchbar from "@/components/Searchbar";
 import Image from "next/image";
 import { getAllProducts } from "@/lib/actions";
 import ProductCard from "@/components/ProductCard";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const Home = async () => {
   const allProducts = await getAllProducts();
