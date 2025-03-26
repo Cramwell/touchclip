@@ -93,10 +93,10 @@ const ProductDetails = async ({ params }: Props) => {
           <div className="product-info">
             <div className="flex flex-col gap-2">
               <p className="text-[34px] text-secondary font-bold">
-                {product.currency} {formatNumber(product.currentPrice)}
+                $ {formatNumber(product.currentPrice)}
               </p>
               <p className="text-[21px] text-black opacity-50 line-through">
-                {product.currency} {formatNumber(product.originalPrice)}
+                $ {formatNumber(product.originalPrice)}
               </p>
             </div>
 
@@ -144,23 +144,17 @@ const ProductDetails = async ({ params }: Props) => {
               <PriceInfoCard
                 title="Average Price"
                 iconSrc="/assets/icons/chart.svg"
-                value={`${product.currency} ${formatNumber(
-                  product.averagePrice
-                )}`}
+                value={`$ ${formatNumber(product.averagePrice)}`}
               />
               <PriceInfoCard
                 title="Highest Price"
                 iconSrc="/assets/icons/arrow-up.svg"
-                value={`${product.currency} ${formatNumber(
-                  product.highestPrice
-                )}`}
+                value={`$ ${formatNumber(product.highestPrice)}`}
               />
               <PriceInfoCard
                 title="Lowest Price"
                 iconSrc="/assets/icons/arrow-down.svg"
-                value={`${product.currency} ${formatNumber(
-                  product.lowestPrice
-                )}`}
+                value={`$ ${formatNumber(product.lowestPrice)}`}
               />
             </div>
           </div>
