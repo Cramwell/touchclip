@@ -53,8 +53,8 @@ const Searchbar = () => {
         type="text"
         value={searchPrompt}
         onChange={(e) => setSearchPrompt(e.target.value)}
-        placeholder="Enter product link"
-        className="searchbar-input"
+        placeholder="Enter your amazon.ae product link"
+        className="searchbar-input border-blue-500 placeholder:italic"
       />
 
       <button type="submit" className="searchbar-btn" disabled={!searchPrompt}>

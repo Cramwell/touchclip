@@ -9,7 +9,10 @@ interface Props {
 
 const ProductCard = ({ product }: Props) => {
   return (
-    <Link href={`/products/${product._id}`} className="product-card">
+    <Link
+      href={`/products/${product._id}`}
+      className="product-card hover:shadow-lg p-8 rounded-lg"
+    >
       <div className="product-card_img-container">
         <Image
           src={product.image}
