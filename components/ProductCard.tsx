@@ -14,13 +14,15 @@ const ProductCard = ({ product }: Props) => {
       className="product-card hover:shadow-lg p-8 rounded-lg"
     >
       <div className="product-card_img-container">
-        <Image
-          src={product.image}
-          alt={product.title}
-          width={200}
-          height={200}
-          className="product-card_img"
-        />
+        {product.image ? (
+          <Image
+            src={product.image}
+            alt={product.title}
+            width={200}
+            height={200}
+            className="product-card_img"
+          />
+        ) : null}
       </div>
 
       <div className="flex flex-col gap-3">
